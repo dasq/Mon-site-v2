@@ -309,10 +309,11 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
   float:right;
   padding:0px 0px 5px 0px;
   margin:10px 16px 0px 0px;
-  background:#F0D4AE;
-  color:#5C1416;
+  background:#5C1416;
+  color:#F0D4AE;
   font: 20px Amatic,'Source Sans Pro', Georgia, serif;
 }
+#contact form input.submit:hover{font-size:22px;}
 #contact #captcha span{
   width: 44px;
 }
