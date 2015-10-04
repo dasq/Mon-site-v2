@@ -475,6 +475,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	background-position: right bottom;
 	background-repeat: no-repeat;
 	position: relative;}
+	#about p{ width:95%;}
 	#about.container{padding: 0px 5px 5px 5px; height:750px;}
 	/*Music*/
 	#music iframe{width:90%; height:450px;}
