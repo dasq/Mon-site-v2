@@ -473,12 +473,12 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	#music iframe{width:90%; height:450px;}
 	/* CONTENT SLIDER */
 	#content-slider {height:360px;}
-	#slider {height:199px;width:301px;margin: 0px 50px 0px 0px;}
-	#mask {height:199px;}
-	#slider li {width:301px;height:199px;top:-325px;}
-	#slider .tooltip {width:300px;height:30px;bottom:45px;left:-301px;}
+	#slider {height:186px;width:280px;margin: 0px 50px 0px 0px;}
+	#mask {height:186px;}
+	#slider li {width:280px;height:186px;top:-325px;}
+	#slider .tooltip {width:280px;height:30px;bottom:45px;left:-280px;}
 	#slider .tooltip h3 {	font-size:16px;	font-weight:300;line-height:30px;padding:0 0 0 20px;}
-	.progress-bar { top:-5px;width:301px;height:5px;	}
+	.progress-bar { top:-5px;width:280px;height:5px;	}
 }
 
 /* Between smartphones and tablets (portrait and landscape) ----------- */ 	
