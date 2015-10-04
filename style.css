@@ -45,7 +45,9 @@ img {
 /* Header parameter to fully display Parallax */
 #header { height:250px; background-image: url("img/Logo.png"); background-size:cover; position:relative; }
 
-#menu #brand {float:left; height:150px; width:auto; margin-top:-90px; opacity:1; z-index:1;}
+#menu #brand {float:left; height:150px; width:auto; opacity:1; position:absolute; display:inline-block;background:inherit;
+    top: 0px;
+margin-bottom:auto;}
 
 /* Parameters of the social icons*/
 #social {
@@ -100,9 +102,10 @@ section {
 }
 
 nav { 
-	text-align:right; 
+	text-align:right ; 
 	line-height:60px;	
-	margin-top: -150px;
+	position:relative;
+	 display:inline-block;
 	}
 	
 nav ul{
@@ -130,11 +133,6 @@ nav li{
 
 nav select {display:none;}
 
-@media only screen and (max-width:960px) {
-	nav ul {display:none;}
-	nav select  {display: inline-block;}
-}
-
 /*Display of the name/link to the top*/
 #logo a { 
 	color: #EB9B60; 
@@ -155,8 +153,8 @@ section {
 /* Anchor span for aligning top of the div with menu bar */
 .anchor{
    display:block;
-   height:60px; /* this is the height of your header */
-   margin-top:-60px; /* this is again negative value of the height of your header */
+   height:60px; /* this is the height of the header */
+   margin-top:-60px; /* this is again negative value of the height of the header */
    visibility:hidden;
 }
 
@@ -171,7 +169,7 @@ section {
 	height: 600px;
 	width: 100%;
 	margin: 0;
-	padding: 0px 20px 20px 150px;
+	padding: 0px 40px 20px 140px;
 	position:relative;
 	margin-top: 0px;
 	text-align: left;
@@ -448,3 +446,38 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	-moz-animation:fullexpand 25s ease-out infinite;
 	-webkit-animation:fullexpand 25s ease-out infinite;
 }
+
+
+
+/* Media queries for tablets and smartphones */
+
+/* Others tiny screens devices(portrait and landscape) ----------- */
+@media only screen and (max-width : 319px) {
+	nav ul {display:none;}
+	nav select  {display: inline-block;}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	nav ul {display:none;}
+	nav select  {display: inline-block;}
+	#menu #brand {height:60px;}
+}
+
+/* Between smartphones and tablets (portrait and landscape) ----------- */ 	
+@media only screen and (min-width : 481px) and (max-width : 767px) {
+	#menu #brand {height:60px;}
+}
+
+/* Tablets (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	#menu #brand {height:100px;}
+	nav { margin-top: -100px;}
+	.container{
+	padding: 0px 20px 20px 100px;
+	}
+	.box-about {
+		background-size: 500px;
+	}
+}
+
