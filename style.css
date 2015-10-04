@@ -45,6 +45,7 @@ img {
 /* Header parameter to fully display Parallax */
 #header { height:250px; background-image: url("img/Logo.png"); background-size:cover; position:relative; }
 
+#menu #brand {float:left; height:150px; width:auto; margin-top:-90px; opacity:1; z-index:1;}
 
 /* Parameters of the social icons*/
 #social {
@@ -79,9 +80,8 @@ section {
 #menu-container{
 	height:60px;
 	width:100%;
-	width: 100%;
 	position: relative;
-	z-index: 1000;
+	z-index: 10;
 }
 
 #menu {
@@ -102,6 +102,7 @@ section {
 nav { 
 	text-align:right; 
 	line-height:60px;	
+	margin-top: -150px;
 	}
 	
 nav ul{
@@ -161,17 +162,16 @@ section {
 
 
 /*Display parameters of the content boxes*/
-#about {
-    background-size: cover;
-	/*z-index: -1;*/
-	}
 .container{
 	color: #5C1417;
-	background-image: url("img/Hintergrund.png");
+	background-image: url("img/Hintergrund.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-color: #F0D4AE;	
-	height: 600px;	
+	height: 600px;
+	width: 100%;
 	margin: 0;
-	padding: 0px 20px 20px 50px;
+	padding: 0px 20px 20px 150px;
 	position:relative;
 	margin-top: 0px;
 	text-align: left;
@@ -190,19 +190,26 @@ section {
 #tour th{border-bottom:1px solid white; padding: 4px 0px 4px 0px;}
 #tour td{padding: 4px 2px 4px 0px;}
 
-#about img {
-	float:right;
-	height: auto;
-	width: 60%;
-	margin-top:-60px;
-}
+.box-about {
+	height:600px;
+	width:100%;
+	background-image: url("img/Western-Farid.png");
+	background-size: 600px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	position: relative;
+	}
+#about p{ width:55%; height:auto; }
 
 #footnote {
 height: 35px;
 bottom: 0px;
-padding: 20px 20px 20px 50px;
+padding: 20px 20px 20px 20px;
 text-align: center; 
 border-top : solid;
+background-color: #510C0F;
+color: #F0D4AE;
+font-size: 16px;
 }
 
 #mentions-legales {

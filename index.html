@@ -41,6 +41,7 @@
 		<script>
 		  $(document).ready(function(){
 			$("#menu-container").sticky({topSpacing:0});
+			$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
 		  });
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
@@ -167,6 +168,7 @@
 		<!-- header and social links -->
 		<!-- !!!!!!!!!!!!!!!!!                           IISOU <3 : Here is the link of picture. Put it in the same folder img and just change the name of the file  -->
 		<div id="header" data-parallax="scroll" data-image-src="img/Logo.jpg">
+			
 			<div id="social" >
 				<ul>
 						<li><a href="http://www.facebook.com" target="_blank"><img alt="Facebook" src="img/social/facebook.png"/></a></li>
@@ -179,7 +181,8 @@
 		
 		<!-- menu -->
 		<div id="menu-container">
-			<div id="menu">
+			<div id="menu">		
+				<a href="#header"><img id="brand" alt="Farid-brand" src="img/brand.png"/></a>
 				<nav class="fixed-nav-bar" style="">
 					<ul>
 						<li><a class="lien" href="#header">Top</a></li>
@@ -206,7 +209,8 @@
 		<span class="anchor" id="about-link"></span>
 		<div id="about" class="container">
 			<div class="box-about">
-				<h2> About </h2>
+			<h2> About </h2>
+			
 				<p> Graduated from classical and jazz schools, 
 				Farid has investigated and performed in all kind of music from world music to hip-hop and everything in between. 
 				With this solo project, Farid has found his path in the music genres and offers today a travelling experience 
@@ -354,7 +358,7 @@
 		</div>
 		
 		<!-- Footnote -->
-		<div id="footnote" class="container">
+		<div id="footnote">
 		© Copyright 2015 Farid Bentchakal | <a href="mentions.html" target="_blank">Mentions légales</a> 
 		</div>
 	
