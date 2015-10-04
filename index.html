@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+		<!-- Basic Page Needs
+	================================================== -->
+        <title>Farid Bentchakal - Acoustic Modern Fingerstyle Guitarist</title>
+		
+		<meta charset="utf-8" />
+		<meta name="description" content="Website of Acoustic Modern Fingerstyle Guitarist Farid Bentchakal">
+		<!--<meta name="keywords" content="Farid Bentchakal, acoustic, modern, fingerstyle, guitar, guitarist, music, musician, world music, folk music, about, booking, travel">-->
+		<meta name="copyright" content="Farid Bentchakal - 2015">
+		
+		<!-- TO UPDATE WITH FAVICON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		Your favicon graphic must be 16x16 pixels 
+	================================================== -->		
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" type="image/ico" href="favicon.ico"> 
+		<!-- an image 57x57 pixels in size and save it as a png -->	
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		
+		<!-- Mobile Specific Metas
+	================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+		<!--[if lt IE 9]><script src="http://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js"></script><![endif]-->
+		
+		<!-- CSS
+	================================================== -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		
+		<!-- JS
+	================================================== -->
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		
+		<!-- Sticky menu bar -->
+		<script src="js/jquery.sticky.js"></script>
+		<script>
+		  $(document).ready(function(){
+			$("#menu-container").sticky({topSpacing:0});
+		  });
+		</script>
+		<script src="js/parallax.js-master/parallax.min.js"></script>
+		
+		<!-- - - - JQUERY FOR SLIDING NAVIGATION - -->   
+		<script>
+		$(document).ready(function() {
+		$('a[href*=#]').each(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		&& location.hostname == this.hostname
+		&& this.hash.replace(/#/,'') ) {
+		var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+		var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+		if ($target) {
+		var targetOffset = $target.offset().top;
+		$(this).click(function() {
+					$("#nav li a").removeClass("active");
+					$(this).addClass('active');
+		$('html, body').animate({scrollTop: targetOffset}, 1000);
+		return false;
+		});
+		}
+		}
+		});
+		 
+		});
+		</script>
+		
+		<!-- dropdown menu -->
+		<script type="text/javascript">
+			function scrollTo(target){
+				var targetPosition = $(target).offset().top;
+				$('html,body').animate({ scrollTop: targetPosition}, 'slow');
+			}
+		</script>
+		
+		<!-- Captcha function -->
+		<script>
+		function captchaCode() {
+		  var Numb1, Numb2, Numb3, Numb4, Code;     
+		  Numb1 = (Math.ceil(Math.random() * 10)-1).toString();
+		  Numb2 = (Math.ceil(Math.random() * 10)-1).toString();
+		  Numb3 = (Math.ceil(Math.random() * 10)-1).toString();
+		  Numb4 = (Math.ceil(Math.random() * 10)-1).toString();
+		  
+		  Code = Numb1 + Numb2 + Numb3 + Numb4;
+		  $("#captcha span").remove();
+		  $("#captcha input").remove();
+		  $("#captcha").append("<span id='code'>" + Code + "</span><input type='button' onclick='captchaCode();'>");
+		}
+
+		$(function() {
+		  captchaCode();
+		  
+		  $('#contactForm').submit(function(){
+			var captchaVal = $("#code").text();
+			var captchaCode = $(".captcha").val();
+			if (captchaVal == captchaCode) {
+			  $(".captcha").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".captcha").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
+			var emailText = $(".email").val();
+			if (emailFilter.test(emailText)) {
+			  $(".email").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".email").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
+			var nameText = $(".name").val();
+			if (nameFilter.test(nameText)) {
+			  $(".name").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".name").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			var messageText = $(".message").val().length;
+			if (messageText > 50) {
+			  $(".message").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".message").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
+			  return false;
+			}
+			if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
+			  $("#contactForm").css("display", "none");
+			  $("#form").append("<h2>Message sent!</h2>");
+			  return false;
+			}
+		  });       
+		});
+
+		</script>
+		
+    </head>
+	
+	<body>
+	<?php include_once("analyticstracking.php") ?>
+		<!-- header and social links -->
+		<!-- !!!!!!!!!!!!!!!!!                           IISOU <3 : Here is the link of picture. Put it in the same folder img and just change the name of the file  -->
+		<div id="header" data-parallax="scroll" data-image-src="img/Logo.jpg">
+			<div id="social" >
+				<ul>
+						<li><a href="http://www.facebook.com" target="_blank"><img alt="Facebook" src="img/social/facebook.png"/></a></li>
+						<li><a href="http://www.soundcloud.com" target="_blank"><img alt="Soundcloud" src="img/social/soundcloud.png"/></a></li>
+						<li><a href="http://www.bandcamp.com" target="_blank"><img alt="Bandcamp" src="img/social/bandcamp.png"/></a></li>
+						<li><a href="http://www.youtube.com" target="_blank"><img alt="Youtube" src="img/social/youtube.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- menu -->
+		<div id="menu-container">
+			<div id="menu">
+				<nav class="fixed-nav-bar" style="">
+					<ul>
+						<li><a class="lien" href="#header">Top</a></li>
+						<li><a class="lien" href="#about-link">About</a></li>
+						<li><a class="lien" href="#music-link">Music</a></li>
+						<li><a class="lien" href="#pictures-link">Pictures</a></li>
+						<li><a class="lien" href="#tour-link">Tour dates</a></li>
+						<li><a class="lien" href="#contact-link">Contact</a></li>
+					</ul>
+					<select name="dropdpown" size="1" onchange="scrollTo(this.value)">
+						<option value="" selected>Menu</option> 
+						<option value="#header">Top</option>
+						<option value="#about-link">About</option>
+						<option value="#music-link">Music</option>
+						<option value="#pictures-link">Pictures</option>
+						<option value="#tour-link">Tour dates</option>
+						<option value="#contact-link">Contact</option>
+					</select>
+				</nav>
+			</div>		
+		</div>
+		
+		<!-- About's content -->
+		<span class="anchor" id="about-link"></span>
+		<div id="about" class="container">
+			<div class="box-about">
+				<h2> About </h2>
+				<p> Graduated from classical and jazz schools, 
+				Farid has investigated and performed in all kind of music from world music to hip-hop and everything in between. 
+				With this solo project, Farid has found his path in the music genres and offers today a travelling experience 
+				through modern fingerstyle guitar. His songs demonstrate clearly the long world travel he just accomplished 
+				recently and got his inspiration from. Orient, India or America are just a part of where you will find yourself 
+				relaxing and dreaming… </p>
+				<a href="#contact">Contact me here!</a>
+			</div>
+		</div>
+		
+		<!-- First photo -->
+		<section id="slide-1" data-parallax="scroll" data-image-src="img/+3/DSC01939.JPG"></section>
+
+		<!-- Music player -->
+		<span class="anchor" id="music-link"></span>
+		<div id="music" class="container">
+			<div class="box">
+				<h2> Music </h2>
+				<iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/149412642%3Fsecret_token%3Ds-qesPa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+			</div>
+		</div>
+		
+		<!-- Second photo -->
+		<section id="slide-2" data-parallax="scroll" data-image-src="img/+3/DSC01942.JPG">	
+		</section>
+	
+		<!-- Pictures' content -->
+		<span class="anchor" id="pictures-link"></span>
+		<div id="pictures" class="container">
+			<div class="box">
+				<h2> Pictures </h2>
+				
+				<div id="content-slider">
+					<div id="slider">
+						<div id="mask">
+							<ul>
+								<li id="first" class="firstanimation">
+									<img src="img/+3/DSC01871.JPG" alt="New Zealand"/>
+									<div class="tooltip">
+										<h3>New Zealand</h3>
+									</div>
+								</li>
+
+								<li id="second" class="secondanimation">
+									<img src="img/+3/DSC01246.JPG" alt="Sri Lanka"/>
+									<div class="tooltip">
+										<h3>Sri Lanka</h3>
+									</div>
+								</li>
+								
+								<li id="third" class="thirdanimation">
+									<img src="img/+3/DSC01304.JPG" alt="Snowalker"/>
+									<div class="tooltip">
+										<h3>Snowalker</h3>
+									</div>
+								</li>
+											
+								<li id="fourth" class="fourthanimation">
+									<img src="img/+3/DSC01525.JPG" alt="Howling"/>
+									<div class="tooltip">
+										<h3>Howling</h3>
+									</div>
+								</li>
+											
+								<li id="fifth" class="fifthanimation">
+									<img src="img/+3/DSC01835.JPG" alt="Sunbathing"/>
+									<div class="tooltip">
+										<h3>Sunbathing</h3>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="progress-bar"></div>
+					</div>
+					<p>The last world trip I have made remains to be my main inspiration for my compositions. 
+					I have been influenced by the lovely people I met either in Sri Lanka or New Zealand and 
+					by the outstanding landscapes of the desert in Dubaï and also by the beauties of the ocean in Thaïland. 
+					It is difficult to transcribe those wonderful discoveries I made and that have influenced me forever. 
+					This is why I share with you my pictures for this unique experience via 
+					my <a href="http://www.instagram.com" target="_blank">Instagram</a>. </p>
+				</div> 
+				
+				<!--<div id="slide">
+					<figure>
+						<img src="img/+3/DSC01871.JPG" alt="">
+						<img src="img/+3/DSC01246.JPG" alt="">
+						<img src="img/+3/DSC01304.JPG" alt="">
+						<img src="img/+3/DSC01525.JPG" alt="">
+						<img src="img/+3/DSC01835.JPG" alt="">
+					</figure>
+				</div>-->
+			</div>
+		</div>
+		
+		<!-- Third photo -->
+		<section id="slide-3" data-parallax="scroll" data-image-src="img/+3/DSC01953.JPG">		
+		</section>
+		
+		<!-- Tour information -->
+		<span class="anchor" id="tour-link"></span>
+		<div id="tour" class="container">
+			<div class="box">
+				<h2> Tour dates </h2>
+				 <table>
+				  <tr>
+					<th>Date</th>
+					<th>Venue</th>
+					<th>Location</th>
+					<th>Tickets</th>
+				  </tr>
+				  <tr>
+					<td>02 Sept 2015</td>
+					<td>TBC</td>
+					<td>Orléans, FR</td>
+					<td>N/A</td>
+				  </tr>
+				</table> 
+				<p>For booking requests, feel free to message me via the <a href="#contact-link">contact form</a>.</p>
+				
+			</div>
+		</div>
+		
+		<!-- Fourth photo -->
+		<section id="slide-4" data-parallax="scroll" data-image-src="img/+3/DSC02074.JPG">	
+		</section>
+		
+		<!-- Contact  form -->
+		<span class="anchor" id="contact-link"></span>
+		<div id="contact" class="container">
+			<div class="box">
+				<h2> Contact </h2>
+				<p>You can send me jokes or love messages or a mail to say to go fuck myself <br/> As you wish bro !!! </p> 
+				<form action="contact.php" id="contactForm" method="post">
+					<span>Name</span>
+					<input type="text" name="name" class="name" placeholder="Enter your name" tabindex=1 /> <br/>
+					<span>Email</span>
+					<input type="text" name="email" class="email" placeholder="Enter your email" tabindex=2 /> <br/>
+					<span id="captcha"></span>
+					<input type="text" name="captcha" class="captcha" maxlength="4" size="4" placeholder="Enter captcha code" tabindex=3 /> <br/>
+					<span>Message</span>
+					<textarea name="message" class="message" placeholder="Enter your message" tabindex=4></textarea> <br/>
+					<input type="submit" name="submit" value="Send e-mail" class="submit" tabindex=5>
+				  </form>				
+			</div>
+		</div>
+		
+		<!-- Footnote -->
+		<div id="footnote" class="container">
+		© Copyright 2015 Farid Bentchakal | <a href="mentions.html" target="_blank">Mentions légales</a> 
+		</div>
+	
+	</body>	
+	
+</html>

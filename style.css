@@ -1,0 +1,443 @@
+/*@import url("reset.css") screen;*/
+@import url("animation.css") screen;
+@font-face{font-family: Amatic; src: url("fonts/Amatic/Amatic-Bold.ttf");}
+@font-face{font-family: Roboto; src: url("fonts/Roboto/Roboto-Regular.ttf");}
+
+
+/* General body paramters */
+body {
+	margin: 0;
+	padding: 0;
+	font: 20px Roboto,'Source Sans Pro', Georgia, sans-serif;
+
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Display of the titles of the content boxes                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Title parameters */
+h2 {
+	font-family: Amatic,'Source Sans Pro', sans-serif;
+	font-weight: normal;
+	font-size: 100px;
+	text-align: left;
+	color: #5C1417;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Colors of all the links in the website (except the ones specificied like the links in the menu                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* General links parameters */
+a { color: #046F80; opacity:1; font-family: Roboto,'Source Sans Pro', sans-serif; border-bottom: 0px none; text-decoration:none; }
+a:active { color: #5C8EAB; opacity:1; border-bottom: 2px solid #fff; }
+a:hover { color: #5C8EAB; opacity:1; border-bottom: 0px none;  }
+a:visited { color: #046F80; opacity:0.6; font-family: Roboto,'Source Sans Pro', sans-serif; border-bottom: 0px none; text-decoration:none;} 
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : END                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Image parameters to fully display */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\8; /* ie8 */
+}
+
+/* Header parameter to fully display Parallax */
+#header { height:250px; background-image: url("img/Logo.png"); background-size:cover; position:relative; }
+
+
+/* Parameters of the social icons*/
+#social {
+height: 50px; 
+width:100%;
+opacity:1;
+position:absolute;
+bottom: 140px;
+right: 50px;
+text-align: right;}
+
+#social ul {margin-top:5px; opacity:1;}
+
+#social li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 0.2%;
+	margin-right: 0.2%;
+	}
+
+#social img {height: 40px; width:auto; }
+
+#social a {opacity:0.2;}
+#social a:hover {opacity:0.7;}
+
+/* Size of the content boxes */
+section {
+	height: 600px;
+}
+
+/* Parameters of the menu */
+#menu-container{
+	height:60px;
+	width:100%;
+	width: 100%;
+	position: relative;
+	z-index: 1000;
+}
+
+#menu {
+	/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Color of the bar menu                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	background-color: #540B0F;
+	/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : End of the color of the bar menu                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	opacity:0.95;
+	height: 60px;
+	padding: 0 20px 0 20px;
+	position: relative;
+	z-index: 1;
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+	-o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+}
+
+nav { 
+	text-align:right; 
+	line-height:60px;	
+	}
+	
+nav ul{
+	padding:0;
+    margin: 0 auto;
+}
+
+nav li{
+	list-style: none;
+	display: inline-block;
+	text-align: right;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Colors of the menu titles                   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* General parameters of the menu titles */
+#menu-container #menu nav ul li a:link { color: #FFF; opacity:1; font-size: 26px; font-family: Amatic,'Source Sans Pro', sans-serif; border-bottom: 0px none; text-decoration:none; }
+/*  Parameters of the menu titles when the mouse is over the title */
+#menu-container #menu nav ul li a:hover { color: #046F80; opacity:1; border-bottom: 0px none;  }
+/*  Parameters of the menu titles when the title have been clicked on*/
+#menu-container #menu nav ul li a:active { color: #046F80; opacity:1; border-bottom: 2px solid #fff; text-decoration:none;}
+/*  Parameters of the menu titles when the title have been visited */
+#menu-container #menu nav ul li a:visited { color: #FFF; opacity:1; font-size: 26px; font-family: Amatic,'Source Sans Pro', sans-serif; border-bottom: 0px none; text-decoration:none;} 
+
+nav select {display:none;}
+
+@media only screen and (max-width:960px) {
+	nav ul {display:none;}
+	nav select  {display: inline-block;}
+}
+
+/*Display of the name/link to the top*/
+#logo a { 
+	color: #EB9B60; 
+	text-decoration: none; 
+	float: left; 
+	font-size: 30px; 
+	line-height: 60px; 
+	font-family: Roboto,'Source Sans Pro', sans-serif; 
+	font-weight: bold; 
+	}
+
+/* Size display of the photos*/	
+section {
+	height:400px;
+	width:100%;
+}
+
+/* Anchor span for aligning top of the div with menu bar */
+.anchor{
+   display:block;
+   height:60px; /* this is the height of your header */
+   margin-top:-60px; /* this is again negative value of the height of your header */
+   visibility:hidden;
+}
+
+
+/*Display parameters of the content boxes*/
+#about {
+    background-size: cover;
+	/*z-index: -1;*/
+	}
+.container{
+	color: #5C1417;
+	background-image: url("img/Hintergrund.png");
+	background-color: #F0D4AE;	
+	height: 600px;	
+	margin: 0;
+	padding: 0px 20px 20px 50px;
+	position:relative;
+	margin-top: 0px;
+	text-align: left;
+	text-align: justify;
+	text-justify: inter-word;
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+	-o-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+}
+
+#about, #pictures, #music, #tour, #contact {}
+
+#tour { height: 300px; }
+#tour table{width:100%; /*background-color:#EB9B60;*/color:white;border-bottom:1px solid white;margin-bottom:10px;}
+#tour th{border-bottom:1px solid white; padding: 4px 0px 4px 0px;}
+#tour td{padding: 4px 2px 4px 0px;}
+
+#about img {
+	float:right;
+	height: auto;
+	width: 60%;
+	margin-top:-60px;
+}
+
+#footnote {
+height: 35px;
+bottom: 0px;
+padding: 20px 20px 20px 50px;
+text-align: center; 
+border-top : solid;
+}
+
+#mentions-legales {
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Colors of the content                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+color: #fff;
+background-color: #466F80;	
+/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : End of the content                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+height: auto;
+margin: 0;
+padding: 0px 20px 20px 50px;
+position:relative;
+margin-top: 0px;
+text-align: left;
+-moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+-o-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* Slide effect for photos */
+#slide {
+width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
+}
+
+#slide figure {
+	position: relative; width: 500%;
+	margin: 0; padding: 0; font-size: 0; text-align: left;
+	animation: 30s slidy infinite; 
+}
+
+#slide img {
+	width:20%; height:auto; float:left;
+}
+
+@keyframes slidy {
+
+0% { left: 0%; }
+
+20% { left: 0%; }
+
+25% { left: -100%; }
+
+45% { left: -100%; }
+
+50% { left: -200%; }
+
+70% { left: -200%; }
+
+75% { left: -300%; }
+
+95% { left: -300%; }
+
+100% { left: -400%; }
+
+}
+
+/* Contact form display */
+#contact {  overflow: auto;}
+#contact form {width:410px; float:left;}
+#contact form span {
+  display:block;
+  float:left;
+  width:100px;
+  padding-top:5px;
+  font: 16px Roboto,'Source Sans Pro', Georgia, serif;
+}
+#contact form input {
+  float:left;
+  width:255px;
+  border:0px;
+  color:#5C1416;
+  padding:10px 10px 10px 30px;
+  font: 14px Roboto,'Source Sans Pro', Verdana, Helvetica, sans-serif;
+  margin-bottom:10px;
+}
+#contact form textarea {
+  float:left;
+  border:0px;
+  width:255px;
+  height:140px;
+  padding:10px 10px 10px 30px;
+  font: 14px Roboto,'Source Sans Pro', Verdana, Helvetica, sans-serif;
+  color:#5C1416;
+  resize: none;
+}
+#contact form input.name {
+  background:#F0D4AE url("img/contact/name.png") no-repeat 10px 8px;
+}
+#contact form input.email {
+  background:#F0D4AE url("img/contact/mail.png") no-repeat 10px 9px;
+}
+#contact form input.captcha {
+  background:#F0D4AE url("img/contact/captcha.png") no-repeat 10px 9px;
+}
+#contact form textarea.message {
+  background:#F0D4AE url("img/contact/message.png") no-repeat 10px 8px;
+}
+#contact form input.submit {
+  cursor: pointer;
+  width:85px;
+  height:30px;
+  float:right;
+  padding:0px 0px 5px 0px;
+  margin:10px 16px 0px 0px;
+  background:#F0D4AE;
+  color:#5C1416;
+  font: 20px Amatic,'Source Sans Pro', Georgia, serif;
+}
+#contact #captcha span{
+  width: 44px;
+}
+#contact #captcha input{
+  background: url("img/contact/captcha.png") no-repeat scroll 0 0 transparent;
+  margin: 5px 0 0;
+  padding: 0;
+  border: medium none;
+  cursor: pointer;
+  width: 15px;
+}
+
+/* SLIDER */
+
+
+/* Common */
+
+.tooltip h3 {
+	font-size:48px;
+	color:#000;
+	text-shadow:0px 1px 1px #f4f4f4;
+	text-align:center;
+	padding:60px 0 30px;
+}
+
+/* LAYOUT */
+.container {
+	margin:0 auto;
+	overflow:hidden;
+	width:auto;
+}
+
+/* CONTENT SLIDER */
+#content-slider {
+	width:100%;
+	height:360px;
+	margin:10px auto 0;
+}
+/* SLIDER */
+#slider {
+	background:#000;
+	border:5px solid #eaeaea;
+	box-shadow:1px 1px 5px rgba(0,0,0,0.7);
+	height:399px;
+	width:601px;
+	/*margin:40px auto 0;*/
+	overflow:visible;
+	position:relative;
+	float:left;
+	margin: 0px 50px 0px 0px;
+}
+#mask {
+	overflow:hidden;
+	height:399px;
+}
+#slider ul {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+#slider li {
+	width:601px;
+	height:399px;
+	position:absolute;
+	top:-325px;
+	list-style:none;
+}
+
+#slider li.firstanimation {
+	-moz-animation:cycle 25s linear infinite;	
+	-webkit-animation:cycle 25s linear infinite;		
+}
+#slider li.secondanimation {
+	-moz-animation:cycletwo 25s linear infinite;
+	-webkit-animation:cycletwo 25s linear infinite;		
+}
+#slider li.thirdanimation {
+	-moz-animation:cyclethree 25s linear infinite;
+	-webkit-animation:cyclethree 25s linear infinite;		
+}
+#slider li.fourthanimation {
+	-moz-animation:cyclefour 25s linear infinite;
+	-webkit-animation:cyclefour 25s linear infinite;		
+}
+#slider li.fifthanimation {
+	-moz-animation:cyclefive 25s linear infinite;
+	-webkit-animation:cyclefive 25s linear infinite;		
+}
+
+#slider .tooltip {
+	background:rgba(0,0,0,0.7);
+	width:300px;
+	height:60px;
+	position:relative;
+	bottom:75px;
+	left:-399px;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;  
+}
+#slider .tooltip h3 {
+	color:#fff;
+	font-size:24px;
+	font-weight:300;
+	line-height:60px;
+	padding:0 0 0 20px;
+}
+#slider li#first:hover .tooltip, 
+#slider li#second:hover .tooltip, 
+#slider li#third:hover .tooltip, 
+#slider li#fourth:hover .tooltip, 
+#slider li#fifth:hover .tooltip {
+	left:0px;
+	margin-bottom:10px;
+}
+#slider:hover li, 
+#slider:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+/* PROGRESS BAR */
+.progress-bar { 
+	position:relative;
+	top:-5px;
+	width:601px; 
+	height:5px;
+	background:#000;
+	-moz-animation:fullexpand 25s ease-out infinite;
+	-webkit-animation:fullexpand 25s ease-out infinite;
+}
