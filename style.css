@@ -480,6 +480,23 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	#slider .tooltip {width:280px;height:30px;bottom:45px;left:-280px;}
 	#slider .tooltip h3 {	font-size:16px;	font-weight:300;line-height:30px;padding:0 0 0 20px;}
 	.progress-bar { top:-5px;width:280px;height:5px;	}
+	/*Tour dates*/
+	#tour.container{height:400px;}
+	/*Contact form*/
+	#contact form {width:300px; float:left;}
+	#contact form span {width:100px;}
+	#contact form input { width:200px;padding:10px 10px 10px 30px;margin-bottom:10px;}
+	#contact form textarea { width:200px; padding:10px 10px 10px 30px;}
+	#contact form input.submit { width:85px; padding:0px 0px 5px 0px; margin:10px 16px 0px 0px;	}
+	#contact #captcha span{width: 44px;}
+	#contact #captcha input{
+	  background: url("img/contact/captcha.png") no-repeat scroll 0 0 transparent;
+	  margin: 5px 0 0;
+	  padding: 0;
+	  border: medium none;
+	  cursor: pointer;
+	  width: 15px;
+	}
 }
 
 /* Between smartphones and tablets (portrait and landscape) ----------- */ 	
