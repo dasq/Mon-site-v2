@@ -39,43 +39,53 @@
 		<!-- Sticky menu bar -->
 		<script src="js/jquery.sticky.js"></script>
 		<script>
-			var mq = window.matchMedia( "(max-width: 767px)" );
-			if (mq.matches) {
-				$(document).ready(function(){
-					$("#menu-container").sticky({topSpacing:0});
-					$("#brand").sticky({topSpacing:0, getWidthFrom: '#brand'});
-				});
+			// media query event handler
+			if (matchMedia) {
+				var mq = window.matchMedia("(max-width: 767px)");
+				mq.addListener(WidthChange);
+				WidthChange(mq);
 			}
-			else {
-				$(document).ready(function(){
-					$("#menu-container").sticky({topSpacing:0});
-					$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
-				});
+
+			// media query change
+			function WidthChange(mq) {
+
+				if (mq.matches) {
+					$(document).ready(function(){
+						$("#menu-container").sticky({topSpacing:0});
+						$("#brand").sticky({topSpacing:0, getWidthFrom: '#brand'});
+					});
+				}
+				else {
+					$(document).ready(function(){
+						$("#menu-container").sticky({topSpacing:0});
+						$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
+					});
+				}
+
 			}
-				
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
 		
 		<!-- - - - JQUERY FOR SLIDING NAVIGATION - -->   
 		<script>
 		$(document).ready(function() {
-		$('a[href*=#]').each(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-		&& location.hostname == this.hostname
-		&& this.hash.replace(/#/,'') ) {
-		var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-		var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-		if ($target) {
-		var targetOffset = $target.offset().top;
-		$(this).click(function() {
-					$("#nav li a").removeClass("active");
-					$(this).addClass('active');
-		$('html, body').animate({scrollTop: targetOffset}, 1000);
-		return false;
-		});
-		}
-		}
-		});
+			$('a[href*=#]').each(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+				&& location.hostname == this.hostname
+				&& this.hash.replace(/#/,'') ) {
+					var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+					var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+					if ($target) {
+						var targetOffset = $target.offset().top;
+						$(this).click(function() {
+									$("#nav li a").removeClass("active");
+									$(this).addClass('active');
+						$('html, body').animate({scrollTop: targetOffset}, 1000);
+						return false;
+						});
+					}
+				}
+			});
 		 
 		});
 		</script>

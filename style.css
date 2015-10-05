@@ -462,7 +462,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	nav ul {display:none;}
 	nav select  {display: inline-block;}
 	.container{padding-top:50px; padding-left:20px;}
-	#menu #brand {height:60px;margin-top:-90;}
+	#menu #brand {height:60px;margin-top:0;}
 	nav{margin-top:-60px;}
 	/*ABOUT*/
 	.box-about {
@@ -512,7 +512,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 /* Between smartphones and tablets (portrait and landscape) ----------- */ 	
 @media only screen and (min-width : 500px) and (max-width : 767px) {
 	.container{padding-top:50px; padding-left:20px;}
-	#menu #brand {height:60px;margin-top:-90;}
+	#menu #brand {height:60px;margin-top:0;}
 	nav{margin-top:-60px;}
 	/*ABOUT*/
 	.box-about {
