@@ -39,10 +39,20 @@
 		<!-- Sticky menu bar -->
 		<script src="js/jquery.sticky.js"></script>
 		<script>
-		  $(document).ready(function(){
-			$("#menu-container").sticky({topSpacing:0});
-			$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
-		  });
+			var mq = window.matchMedia( "(max-width: 767px)" );
+			if (mq.matches) {
+				$(document).ready(function(){
+					$("#menu-container").sticky({topSpacing:0});
+					$("#brand").sticky({topSpacing:0, getWidthFrom: '#brand'});
+				});
+			}
+			else {
+				$(document).ready(function(){
+					$("#menu-container").sticky({topSpacing:0});
+					$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
+				});
+			}
+				
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
 		
