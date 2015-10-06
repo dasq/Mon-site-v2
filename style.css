@@ -43,7 +43,7 @@ img {
 }
 
 /* Header parameter to fully display Parallax */
-#header { height:250px; background-image: url("img/Logo.png"); background-size:cover; position:relative; }
+#header { height:250px; background-image: url("img/unnamed.png"); background-size:cover; position:relative; opacity:0;}
 
 #menu #brand {float:left; height:150px; width:auto; margin-top:-90px; opacity:1; z-index:1;}
 

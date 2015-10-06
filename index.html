@@ -114,69 +114,69 @@
 		}
 
 		$(function() {
-		  captchaCode();
-		  
-		  $('#contactForm').submit(function(){
-			var captchaVal = $("#code").text();
-			var captchaCode = $(".captcha").val();
-			if (captchaVal == captchaCode) {
-			  $(".captcha").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".captcha").css({
-				"color" : "#CE3B46"
-			  });
-			}
+			captchaCode();
 			
-			var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
-			var emailText = $(".email").val();
-			if (emailFilter.test(emailText)) {
-			  $(".email").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".email").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
-			var nameText = $(".name").val();
-			if (nameFilter.test(nameText)) {
-			  $(".name").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".name").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			var messageText = $(".message").val().length;
-			if (messageText > 50) {
-			  $(".message").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".message").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
-			  return false;
-			}
-			if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
-			  $("#contactForm").css("display", "none");
-			  $("#form").append("<h2>Message sent!</h2>");
-			  return false;
-			}
-		  });       
+			$('#contactForm').submit(function(){
+				var captchaVal = $("#code").text();
+				var captchaCode = $(".captcha").val();
+				if (captchaVal == captchaCode) {
+				  $(".captcha").css({
+					"color" : "#609D29"
+				  });
+				}
+				else {
+				  $(".captcha").css({
+					"color" : "#CE3B46"
+				  });
+				}
+				
+				var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
+				var emailText = $(".email").val();
+				if (emailFilter.test(emailText)) {
+				  $(".email").css({
+					"color" : "#609D29"
+				  });
+				}
+				else {
+				  $(".email").css({
+					"color" : "#CE3B46"
+				  });
+				}
+				
+				var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
+				var nameText = $(".name").val();
+				if (nameFilter.test(nameText)) {
+				  $(".name").css({
+					"color" : "#609D29"
+				  });
+				}
+				else {
+				  $(".name").css({
+					"color" : "#CE3B46"
+				  });
+				}
+				
+				var messageText = $(".message").val().length;
+				if (messageText > 50) {
+				  $(".message").css({
+					"color" : "#609D29"
+				  });
+				}
+				else {
+				  $(".message").css({
+					"color" : "#CE3B46"
+				  });
+				}
+				
+				if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
+				  return false;
+				}
+				if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
+				  $("#contactForm").css("display", "none");
+				  $("#form").append("<h2>Message sent!</h2>");
+				  return false;
+				}
+			});       
 		});
 
 		</script>
@@ -187,7 +187,7 @@
 	<?php include_once("analyticstracking.php") ?>
 		<!-- header and social links -->
 		<!-- !!!!!!!!!!!!!!!!!                           IISOU <3 : Here is the link of picture. Put it in the same folder img and just change the name of the file  -->
-		<div id="header" data-parallax="scroll" data-image-src="img/Logo.jpg">
+		<div id="header" data-parallax="scroll" data-image-src="img/unnamed.png">
 			
 			<div id="social" >
 				<ul>
