@@ -39,55 +39,51 @@
 		<!-- Sticky menu bar -->
 		<script src="js/jquery.sticky.js"></script>
 		<script>
-			// media query event handler
-			if (matchMedia) {
-				var mq = window.matchMedia("(max-width: 767px)");
-				mq.addListener(WidthChange);
-				WidthChange(mq);
-			}
-
-			// media query change
-			function WidthChange(mq) {
-
-				if (mq.matches) {
-					$(document).ready(function(){
-						$("#menu-container").sticky({topSpacing:0});
-						$("#brand").sticky({topSpacing:0, getWidthFrom: '#brand'});
-					});
-				}
-				else {
-					$(document).ready(function(){
-						$("#menu-container").sticky({topSpacing:0});
-						$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
-					});
-				}
-
-			}
+		  $(document).ready(function(){
+			$("#menu-container").sticky({topSpacing:0});
+			$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
+		  });
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
 		
 		<!-- - - - JQUERY FOR SLIDING NAVIGATION - -->   
 		<script>
 		$(document).ready(function() {
-			$('a[href*=#]').each(function() {
-				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-				&& location.hostname == this.hostname
-				&& this.hash.replace(/#/,'') ) {
-					var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-					var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-					if ($target) {
-						var targetOffset = $target.offset().top;
-						$(this).click(function() {
-									$("#nav li a").removeClass("active");
-									$(this).addClass('active');
-						$('html, body').animate({scrollTop: targetOffset}, 1000);
-						return false;
-						});
-					}
-				}
-			});
+		$('a[href*=#]').each(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		&& location.hostname == this.hostname
+		&& this.hash.replace(/#/,'') ) {
+		var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+		var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+		if ($target) {
+		var targetOffset = $target.offset().top;
+		$(this).click(function() {
+					$("#nav li a").removeClass("active");
+					$(this).addClass('active');
+		$('html, body').animate({scrollTop: targetOffset}, 1000);
+		return false;
+		});
+		}
+		}
+		});
 		 
 		});
+		</script>
+		
+		<!-- Dynamic display header -->
+		<script type="text/javascript">
+			function jsUpdateSize(){
+				// Get the dimensions of the viewport
+				var height = window.innerHeight ||
+							 document.documentElement.clientHeight ||
+							 document.body.clientHeight;
+							 
+				var heightBanner = height - 60;
+				//change the value of the height
+				$("#header").css({"height": heightBanner,}); 
+			};
+			window.onload = jsUpdateSize;       // When the page first loads
+			window.onresize = jsUpdateSize;     // When the browser changes size
 		</script>
 		
 		<!-- dropdown menu -->
@@ -114,69 +110,69 @@
 		}
 
 		$(function() {
-			captchaCode();
+		  captchaCode();
+		  
+		  $('#contactForm').submit(function(){
+			var captchaVal = $("#code").text();
+			var captchaCode = $(".captcha").val();
+			if (captchaVal == captchaCode) {
+			  $(".captcha").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".captcha").css({
+				"color" : "#CE3B46"
+			  });
+			}
 			
-			$('#contactForm').submit(function(){
-				var captchaVal = $("#code").text();
-				var captchaCode = $(".captcha").val();
-				if (captchaVal == captchaCode) {
-				  $(".captcha").css({
-					"color" : "#609D29"
-				  });
-				}
-				else {
-				  $(".captcha").css({
-					"color" : "#CE3B46"
-				  });
-				}
-				
-				var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
-				var emailText = $(".email").val();
-				if (emailFilter.test(emailText)) {
-				  $(".email").css({
-					"color" : "#609D29"
-				  });
-				}
-				else {
-				  $(".email").css({
-					"color" : "#CE3B46"
-				  });
-				}
-				
-				var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
-				var nameText = $(".name").val();
-				if (nameFilter.test(nameText)) {
-				  $(".name").css({
-					"color" : "#609D29"
-				  });
-				}
-				else {
-				  $(".name").css({
-					"color" : "#CE3B46"
-				  });
-				}
-				
-				var messageText = $(".message").val().length;
-				if (messageText > 50) {
-				  $(".message").css({
-					"color" : "#609D29"
-				  });
-				}
-				else {
-				  $(".message").css({
-					"color" : "#CE3B46"
-				  });
-				}
-				
-				if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
-				  return false;
-				}
-				if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
-				  $("#contactForm").css("display", "none");
-				  $("#form").append("<h2>Message sent!</h2>");
-				  return false;
-				}
-			});       
+			var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
+			var emailText = $(".email").val();
+			if (emailFilter.test(emailText)) {
+			  $(".email").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".email").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
+			var nameText = $(".name").val();
+			if (nameFilter.test(nameText)) {
+			  $(".name").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".name").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			var messageText = $(".message").val().length;
+			if (messageText > 50) {
+			  $(".message").css({
+				"color" : "#609D29"
+			  });
+			}
+			else {
+			  $(".message").css({
+				"color" : "#CE3B46"
+			  });
+			}
+			
+			if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
+			  return false;
+			}
+			if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
+			  $("#contactForm").css("display", "none");
+			  $("#form").append("<h2>Message sent!</h2>");
+			  return false;
+			}
+		  });       
 		});
 
 		</script>
@@ -187,7 +183,7 @@
 	<?php include_once("analyticstracking.php") ?>
 		<!-- header and social links -->
 		<!-- !!!!!!!!!!!!!!!!!                           IISOU <3 : Here is the link of picture. Put it in the same folder img and just change the name of the file  -->
-		<div id="header" data-parallax="scroll" data-image-src="img/unnamed.png">
+		<div id="header" data-parallax="scroll" data-image-src="img/013.jpg">
 			
 			<div id="social" >
 				<ul>
