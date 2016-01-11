@@ -41,7 +41,14 @@
 		<script>
 		  $(document).ready(function(){
 			$("#menu-container").sticky({topSpacing:0});
-			$("#brand").sticky({topSpacing:90, getWidthFrom: '#brand'});
+			
+			var height = window.innerHeight ||
+							 document.documentElement.clientHeight ||
+							 document.body.clientHeight;
+							 
+			var heightBrand = height - 90;
+			$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
+			$("#brand").css({"margin-top": -heightBrand,}); 			
 		  });
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
