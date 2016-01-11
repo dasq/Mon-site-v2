@@ -42,13 +42,24 @@
 		  $(document).ready(function(){
 			$("#menu-container").sticky({topSpacing:0});
 			
+			var width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+				
 			var height = window.innerHeight ||
 							 document.documentElement.clientHeight ||
 							 document.body.clientHeight;
-							 
-			var heightBrand = height - 90;
-			$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
-			$("#brand").css({"margin-top": -heightBrand,}); 			
+			if (width < 767) {
+				var heightBrand = 0;
+				$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
+				//$("#brand").css({"margin-top": -heightBrand,}); 
+			} 
+			else {
+				var heightBrand = height - 90;
+				$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
+				$("#brand").css({"margin-top": -heightBrand,}); 
+			}
+						
 		  });
 		</script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
@@ -189,8 +200,7 @@
 	<body>
 	<?php include_once("analyticstracking.php") ?>
 		<!-- header and social links -->
-		<!-- !!!!!!!!!!!!!!!!!                           IISOU <3 : Here is the link of picture. Put it in the same folder img and just change the name of the file  -->
-		<div id="header" data-parallax="scroll" data-image-src="img/013.jpg">
+		<div id="header" data-parallax="scroll" data-image-src="img/unnamed.jpg">
 			
 			<div id="social" >
 				<ul>
@@ -205,7 +215,7 @@
 		<!-- menu -->
 		<div id="menu-container">
 			<div id="menu">
-				<a href="#header"><img id="brand" alt="Farid-brand" src="img/brand.png"/></a>
+				<a href="#header"><img id="brand" alt="Farid-brand" src="img/brand-transparent-bis.png"/></a>
 				<nav class="fixed-nav-bar" style="">
 					<ul>
 						<!--<li><a class="lien" href="#header">Top</a></li>-->

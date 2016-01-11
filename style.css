@@ -458,7 +458,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 499px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 	nav ul {display:none;}
 	nav select  {display: inline-block;}
 	.container{padding-top:50px; padding-left:20px;}
@@ -510,7 +510,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 }
 
 /* Between smartphones and tablets (portrait and landscape) ----------- */ 	
-@media only screen and (min-width : 500px) and (max-width : 767px) {
+@media only screen and (min-width : 481px) and (max-width : 767px) {
 	.container{padding-top:50px; padding-left:20px;}
 	#menu #brand {height:60px;margin-top:0;}
 	nav{margin-top:-60px;}
@@ -540,5 +540,7 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 	.box-about {
 		background-size: 500px;
 	}
+	#menu #brand {height:100px;margin-top:0;}
+	nav{margin-top:-100px;}
 }
 

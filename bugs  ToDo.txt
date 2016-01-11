@@ -1,4 +1,3 @@
 1. gérer l'envoi du mail du formulaire
 2. <title> = <h1> for SEO... So should I change all the h1 to h2 and add somewhere the title in a h1 ??? (ref: http://howtoseo.link2light.com/how-to-seo-your-website_meta-tags.php)
-3. JS Height : ajouter conditions IF pour ne pas changer la valeur height dans les mediaports des petits écrans (autre cas de figure)
-4. Générer différentes tailles du header (appareils mobiles amenés à utiliser 3g, améliorer expérience utilisateur)
+
