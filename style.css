@@ -207,22 +207,7 @@ color: #F0D4AE;
 font-size: 16px;
 }
 
-#mentions-legales {
-/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Colors of the content                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-color: #fff;
-background-color: #466F80;	
-/* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : End of the content                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-height: auto;
-margin: 0;
-padding: 0px 20px 20px 50px;
-position:relative;
-margin-top: 0px;
-text-align: left;
--moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
--webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
--o-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.9);
-}
+#mentions-legales {height: auto;}
 
 /* Slide effect for photos */
 #slide {
@@ -447,6 +432,10 @@ width: 80%; max-width: 723px; overflow: hidden; border: 3px solid #fff;
 
 /*Soundcloud player*/
 #music iframe{width:50%; height:450px;}
+
+/* Page about me*/
+#about-me {height:auto;}
+#about-me img {width:30%; height:auto;float:left;margin-right:50px; margin-bottom:50px;margin-top:30px;}
 
 
 /* Media queries for tablets and smartphones */
