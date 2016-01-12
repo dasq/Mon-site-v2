@@ -211,49 +211,12 @@ font-size: 16px;
 #mentions-legales {height: auto;}
 
 /* Slide effect for photos */
-#pictures iframe {top:80px;height:"382"; width:"575";
+#pictures iframe {
 	-webkit-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-moz-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-ms-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-o-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
-}
-.flickr {
-	height:auto;
-	width:auto;
-	z-index: 0;
-}
-.curve {position:relative;}
-.curve:before, .curve:after {
-	z-index: -1;
-	position: absolute;
-
-	content: "";
-	bottom: 7%;
-	left: 1%;
-	width: 50%;
-	top: 80%;
-  
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	
-	-webkit-box-shadow: 0px 15px 5px #777;
-	-moz-box-shadow: 0px 15px 5px #777;
-	-ms-box-shadow: 0px 15px 5px #777;
-	-o-box-shadow: 0px 15px 5px #777;
-	box-shadow: 0px 15px 5px #777;
-}
-.curve:after {
-	right: 41%;
-	left:auto;
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	transform: rotate(3deg);
 }
 
 @keyframes slidy {
@@ -358,89 +321,20 @@ font-size: 16px;
 /* Page about me*/
 #about-me {height:auto;}
 
-#about-me .busking {width:30%; height:auto;float:left;margin-right:50px; margin-bottom:50px;margin-top:30px;z-index: 0;}
-#about-me .busking img{width:100%;height:auto;top:80px;
+#about-me #busking {width:30%; height:auto;float:left;margin-right:50px; margin-bottom:50px;margin-top:30px;
 	-webkit-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-moz-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-ms-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-o-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
-	}
-#about-me .curve1 {position:relative;}
-#about-me .curve1::before, #about-me .curve1::after  {
-	z-index: -1;
-	position: absolute;
-
-	content: "";
-	bottom: 4%;
-	left: 1%;
-	width: 50%;
-	top: 80%;
-  
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	
-	-webkit-box-shadow: 0px 15px 5px #777;
-	-moz-box-shadow: 0px 15px 5px #777;
-	-ms-box-shadow: 0px 15px 5px #777;
-	-o-box-shadow: 0px 15px 5px #777;
-	box-shadow: 0px 15px 5px #777;
 }
 
-#about-me .curve1::after {
-	right: 1%;
-	left:auto;
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	transform: rotate(3deg);
-}
-
-#about-me .portrait {width:40%; height:auto;float:right;margin-left:50px; margin-bottom:50px;margin-top:10px;z-index: 0;}
-#about-me .portrait img{width:100%;height:auto;top:80px;
+#about-me #portrait {width:40%; height:auto;float:right;margin-left:50px; margin-bottom:50px;margin-top:10px;
 	-webkit-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-moz-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-ms-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	-o-box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
 	box-shadow: 0 0 65px #cdbe9f inset, 0 0 20px #beae8c inset, 0 0 5px #816f47;
-	}
-	
-#about-me .curve2 {position:relative;}
-#about-me .curve2::before, #about-me .curve2::after  {
-	z-index: -1;
-	position: absolute;
-
-	content: "";
-	bottom: 8%;
-	left: 1%;
-	width: 50%;
-	top: 80%;
-  
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	
-	-webkit-box-shadow: 0px 15px 5px #777;
-	-moz-box-shadow: 0px 15px 5px #777;
-	-ms-box-shadow: 0px 15px 5px #777;
-	-o-box-shadow: 0px 15px 5px #777;
-	box-shadow: 0px 15px 5px #777;
-}
-
-#about-me .curve2::after {
-	right: 1%;
-	left:auto;
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	transform: rotate(3deg);
 }
 
 
