@@ -344,6 +344,8 @@ font-size: 16px;
 @media only screen and (max-width : 319px) {
 	nav ul {display:none;}
 	nav select  {display: inline-block;}
+	/*Flickr slider*/
+	#pictures iframe{display:none;}
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -371,6 +373,8 @@ font-size: 16px;
 	#music iframe{width:90%; height:450px;}
 	/* CONTENT SLIDER */
 	#pictures.container{padding: 0px 5px 5px 5px; height:750px;}
+	/*Flickr slider*/
+	#pictures iframe{width:300px; height:199px;}
 
 	/*Tour dates*/
 	#tour.container{height:400px;}
@@ -406,7 +410,7 @@ font-size: 16px;
 	/*Music*/
 	#music iframe{width:90%; height:450px;}
 	/*Flickr slider*/
-	#pictures iframe{width:50%; height:50%;}
+	#pictures iframe{width:400px; height:266px;}
 }
 
 /* Tablets (portrait and landscape) ----------- */
