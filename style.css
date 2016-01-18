@@ -61,20 +61,21 @@ img {
 /* Header parameter to fully display Parallax */
 #header { height:530px; }
 
-#menu #brand {float:left; height:150px; width:auto; margin-top:-490px; opacity:1; z-index:1;}
+#menu #brand {float:left; height:150px; width:auto; margin-top:-510px; opacity:1; z-index:1;}
 
 #brand-sticky-wrapper {max-width:150px;}
 #brand-link {max-width:200px;}
 
 /* Parameters of the social icons*/
 #social {
-height: 50px; 
+height: 40px; 
 width:100%;
 opacity:1;
 position:absolute;
-bottom: 140px;
-right: 50px;
-text-align: right;}
+text-align: right;
+top: 15px;
+right: 15px
+}
 
 #social ul {margin-top:5px; opacity:1;}
 
@@ -85,10 +86,10 @@ text-align: right;}
 	margin-right: 0.2%;
 	}
 
-#social img {height: 40px; width:auto; }
+#social img {height: 35px; width:auto; }
 
-#social a {opacity:0.2;}
-#social a:hover {opacity:0.7;}
+#social a {opacity:0.5;}
+#social a:hover {opacity:1;}
 
 /* Size of the content boxes */
 section {
