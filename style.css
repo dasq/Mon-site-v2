@@ -2,6 +2,7 @@
 @import url("animation.css") screen;
 @font-face{font-family: Amatic; src: url("fonts/Amatic/Amatic-Bold.ttf");}
 @font-face{font-family: Roboto; src: url("fonts/Roboto/Roboto-Regular.ttf");}
+@font-face{font-family: AmaticRegular; src: url("fonts/Amatic/AmaticSC-Regular.ttf");}
 
 
 /* General body paramters */
@@ -28,6 +29,20 @@ h2 {
 	padding-top:10px;
 }
 
+h3 {
+	font-family: Amatic,'Source Sans Pro', sans-serif;
+	font-weight: normal;
+	font-style: oblique;
+	font-size: 40px;
+	text-align: center;
+	color: #5C1417;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	padding-top:10px;
+}
+h3 span {font-family: AmaticRegular,'Source Sans Pro', sans-serif;font-weight:550;}
+
 /* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Colors of all the links in the website (except the ones specificied like the links in the menu                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* General links parameters */
 a { color: #046F80; opacity:1; font-family: Roboto,'Source Sans Pro', sans-serif; border-bottom: 0px none; text-decoration:none; }
@@ -44,9 +59,12 @@ img {
 }
 
 /* Header parameter to fully display Parallax */
-#header { height:530px; background-image: url("img/unnamed.png"); background-size:cover; position:relative; opacity:0;}
+#header { height:530px; }
 
 #menu #brand {float:left; height:150px; width:auto; margin-top:-490px; opacity:1; z-index:1;}
+
+#brand-sticky-wrapper {max-width:150px;}
+#brand-link {max-width:200px;}
 
 /* Parameters of the social icons*/
 #social {
