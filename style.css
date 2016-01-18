@@ -218,7 +218,8 @@ section {
 #footnote {
 height: auto;
 bottom: 0px;
-padding: 20px 20px 10px 20px;
+padding-bottom:20px;
+padding-top: 20px;
 text-align: center; 
 border-top : solid;
 background-color: #510C0F;
