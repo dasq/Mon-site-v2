@@ -63,8 +63,8 @@ img {
 
 #menu #brand {float:left; height:150px; width:auto; margin-top:-510px; opacity:1; z-index:1;}
 
-#brand-sticky-wrapper {max-width:150px;}
-#brand-link {max-width:200px;}
+#brand-sticky-wrapper {max-width:3000px;}
+#brand-link {max-width:30 00px;}
 
 /* Parameters of the social icons*/
 #social {
