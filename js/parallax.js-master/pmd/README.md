@@ -6,11 +6,7 @@ Simple parallax scrolling effect inspired by [Spotify.com](http://spotify.com/) 
 
 ## Installation
 
-Download package or install with Bower and include `parallax.min.js` in your document after including jQuery.
-
-```bash
-$ bower i --save parallax.js
-```
+Download and include `parallax.min.js` in your document after including jQuery.
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -52,39 +48,6 @@ Also, keep in mind that once initialized, the parallax plugin presumes a fixed p
 
 ```javascript
 jQuery(window).trigger('resize').trigger('scroll');
-```
-
-### Using inner HTML for complex content
-
-You can use the following syntax to enable complex content for the parallax:
-
-```html
-<div class="parallax-window">
-  <div class="parallax-slider">
-    <span style="position:absolute; top: 400px; left: 400px;">Some Text</span>
-	<p>Some other Content</p>
-  </div>
-</div>
-```
-Please note, that the div with class "parallax-slider" is essential here.
-
-You then need to initialize it through JS and provide the naturalWidth and naturalHeight options in order to be rendered correctly.
-
-```
-$('.parallax-window').parallax({
-    naturalWidth: 600,
-    naturalHeight: 400
-  });
-```
-
-This also makes it possible to use responsive images in the slider:
-
-```html
-<div class="parallax-window">
-  <div class="parallax-slider">
-    <img src="/path/to/image.jpg" srcset="/path/to/image-400px.jpg 400w, /path/to/image-800px.jpg 800w, /path/to/image-1200px.jpg 1200w" sizes="100vw">
-  </div>
-</div>
 ```
 
 ## Options
@@ -189,7 +152,7 @@ LICENSE
 
 The MIT License (MIT)
 
-Copyright (c) 2016 PixelCog Inc.
+Copyright (c) 2015 PixelCog Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

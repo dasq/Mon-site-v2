@@ -13,13 +13,12 @@
 		<!--<meta name="keywords" content="Farid Ben Miles, acoustic, modern, fingerstyle, guitar, guitarist, music, musician, world music, folk music, about, booking, travel">-->
 		<meta name="copyright" content="Farid Ben Miles - 2015-2016">
 		
-		<!-- TO UPDATE WITH FAVICON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		Your favicon graphic must be 16x16 pixels 
+		<!-- Your favicon graphic must be 16x16 pixels 
 	================================================== -->		
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="icon" type="image/ico" href="favicon.ico"> 
+		<link rel="shortcut icon" href="img/favicon/Farid_Ben_Miles_ico_16.png">
+		<link rel="icon" type="image/ico" href="img/favicon/Farid_Ben_Miles_ico_16.png"> 
 		<!-- an image 57x57 pixels in size and save it as a png -->	
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- !!!!!!!!!!!!!!!!!!!!!! TO UPDATE WITH FAVICON  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 		
 		<!-- Mobile Specific Metas
 	================================================== -->
@@ -38,175 +37,38 @@
 		
 		<!-- Sticky menu bar -->
 		<script src="js/jquery.sticky.js"></script>
-		<script>
-		  $(document).ready(function(){
-			$("#menu-container").sticky({topSpacing:0});
-			
-			var width = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-				
-			var height = window.innerHeight ||
-							 document.documentElement.clientHeight ||
-							 document.body.clientHeight;
-			if (width < 767) {
-				var heightBrand = 0;
-				$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
-				//$("#brand").css({"margin-top": -heightBrand,}); 
-			} 
-			else {
-				var heightBrand = height - 75;
-				$("#brand").sticky({topSpacing:heightBrand, getWidthFrom: '#brand'});
-				$("#brand").css({"margin-top": -heightBrand,}); 
-			}
-						
-		  });
-		</script>
+		<script src="js/sticky.menubar.js"></script>
 		<script src="js/parallax.js-master/parallax.min.js"></script>
 		
 		<!-- - - - JQUERY FOR SLIDING NAVIGATION - -->   
-		<script>
-		$(document).ready(function() {
-		$('a[href*=#]').each(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-		&& location.hostname == this.hostname
-		&& this.hash.replace(/#/,'') ) {
-		var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-		var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-		if ($target) {
-		var targetOffset = $target.offset().top;
-		$(this).click(function() {
-					$("#nav li a").removeClass("active");
-					$(this).addClass('active');
-		$('html, body').animate({scrollTop: targetOffset}, 1000);
-		return false;
-		});
-		}
-		}
-		});
-		 
-		});
-		</script>
+		<script src="js/sliding.navigation.js">	</script>
 		
 		<!-- Dynamic display header -->
-		<script type="text/javascript">
-			function jsUpdateSize(){
-				// Get the dimensions of the viewport
-				var height = window.innerHeight ||
-							 document.documentElement.clientHeight ||
-							 document.body.clientHeight;
-							 
-				var heightBanner = height - 60;
-				//change the value of the height
-				$("#header").css({"height": heightBanner,}); 
-			};
-			window.onload = jsUpdateSize;       // When the page first loads
-			window.onresize = jsUpdateSize;     // When the browser changes size
-		</script>
+		<script type="text/javascript" src="js/dynamic.header.js"></script>
 		
 		<!-- dropdown menu -->
-		<script type="text/javascript">
-			function scrollTo(target){
-				var targetPosition = $(target).offset().top;
-				$('html,body').animate({ scrollTop: targetPosition}, 'slow');
-			}
-		</script>
+		<script type="text/javascript" src="js/dropdown.menu.js"></script>
 		
 		<!-- Captcha function -->
-		<script>
-		function captchaCode() {
-		  var Numb1, Numb2, Numb3, Numb4, Code;     
-		  Numb1 = (Math.ceil(Math.random() * 10)-1).toString();
-		  Numb2 = (Math.ceil(Math.random() * 10)-1).toString();
-		  Numb3 = (Math.ceil(Math.random() * 10)-1).toString();
-		  Numb4 = (Math.ceil(Math.random() * 10)-1).toString();
-		  
-		  Code = Numb1 + Numb2 + Numb3 + Numb4;
-		  $("#captcha span").remove();
-		  $("#captcha input").remove();
-		  $("#captcha").append("<span id='code'>" + Code + "</span><input type='button' onclick='captchaCode();'>");
-		}
-
-		$(function() {
-		  captchaCode();
-		  
-		  $('#contactForm').submit(function(){
-			var captchaVal = $("#code").text();
-			var captchaCode = $(".captcha").val();
-			if (captchaVal == captchaCode) {
-			  $(".captcha").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".captcha").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;   
-			var emailText = $(".email").val();
-			if (emailFilter.test(emailText)) {
-			  $(".email").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".email").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
-			var nameText = $(".name").val();
-			if (nameFilter.test(nameText)) {
-			  $(".name").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".name").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			var messageText = $(".message").val().length;
-			if (messageText > 50) {
-			  $(".message").css({
-				"color" : "#609D29"
-			  });
-			}
-			else {
-			  $(".message").css({
-				"color" : "#CE3B46"
-			  });
-			}
-			
-			if ((captchaVal !== captchaCode) || (!emailFilter.test(emailText)) || (!nameFilter.test(nameText)) || (messageText < 50)) {
-			  return false;
-			}
-			if ((captchaVal == captchaCode) && (emailFilter.test(emailText)) && (nameFilter.test(nameText)) && (messageText > 50)) {
-			  $("#contactForm").css("display", "none");
-			  $("#form").append("<h2>Message sent!</h2>");
-			  return false;
-			}
-		  });       
-		});
-
-		</script>
+		<script src="js/captcha.function.js"></script>
+		
+		<!-- Smooth scrolling in Chrome -->
+		<script src="js/smoothscroll.js"></script>
+		
+		<!-- Google Analytics -->
+		<script src="js/analytics.js"></script>
 		
     </head>
 	
 	<body>
-	<?php include_once("analyticstracking.php") ?>
 		<!-- header and social links -->
 		<div id="header" data-parallax="scroll" data-image-src="img/unnamed.jpg">
 			
 			<div id="social" >
 				<ul>
 						<li><a href="http://www.facebook.com/faridbenmiles" title="Facebook" target="_blank"><img alt="Facebook" src="img/social/facebook.png"/></a></li>
-						<li><a href="http://www.soundcloud.com" title="Soundcloud" target="_blank"><img alt="Soundcloud" src="img/social/soundcloud.png"/></a></li>
-						<li><a href="http://www.bandcamp.com" title="Bandcamp" target="_blank"><img alt="Bandcamp" src="img/social/bandcamp.png"/></a></li>
+						<li><a href="http://www.soundcloud.com/faridbenmiles" title="Soundcloud" target="_blank"><img alt="Soundcloud" src="img/social/soundcloud.png"/></a></li>
+						<li><a href="http://www.faridbenmiles.bandcamp.com" title="Bandcamp" target="_blank"><img alt="Bandcamp" src="img/social/bandcamp.png"/></a></li>
 						<li><a href="http://www.youtube.com" title="Youtube" target="_blank"><img alt="Youtube" src="img/social/youtube.png"/></a></li>
 						<li><a href="http://www.flickr.com" title="Flickr"><img alt="Flickr!" src="img/social/flickr.png"></a></li>
 				</ul>
@@ -215,9 +77,10 @@
 		
 		<!-- menu -->
 		<div id="menu-container">
-			<div id="menu">
+			<div id="menu" class="fixed-nav-bar">
 				<div id="brand-link"><a href="#header"><img id="brand" alt="Farid-brand" src="img/logo/logo.png"/></a></div>
-				<nav class="fixed-nav-bar" style="">
+					
+				<nav>
 					<ul>
 						<!--<li><a class="lien" href="#header">Top</a></li>-->
 						<li><a class="lien" href="#about-link">About</a></li>
@@ -245,12 +108,16 @@
 			<div class="box-about">
 			<h2> About </h2>
 			
-				<p> Graduated from classical and jazz schools, 
-				I have investigated and performed in all kind of music from world music to hip-hop and everything in between. 
-				With this solo project, I have found my path in the music genres and I offer today a travelling experience 
-				through modern fingerstyle guitar. My songs demonstrate clearly the long world travel I just accomplished 
-				recently and got my inspirations from. Orient, India or America are just a part of where you will find yourself 
-				relaxing and dreaming… </p>
+				<p> This is with real excitement that I welcome you in my world! </br></br>
+				This journey is conducted with the acoustic sounds of my guitar telling you the stories of my travels.
+				Full of beautiful landscapes in my head and unforgetable people in my heart, I want to share with you the beauty of going overseas.
+				Most of the time, I travelled just with my feet stuck at the same place but with my ears full of music. But recently, I enjoyed
+				a world travel with just a backpack and my guitar. This has been life changing...
+				</br></br>
+				With only the use of an acoustic guitar, I take you in a “travelling by ear” experience and I hope communicating you
+				the love I have for our World.
+				Asia, North Africa, Occident are just a part of where you will find yourself dreaming.
+				</p>
 				<a href="about.html#about-me-link">More about me</a>
 			</div>
 		</div>
@@ -263,7 +130,7 @@
 		<div id="music" class="container">
 			<div class="box">
 				<h2> Music </h2>
-				<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/149412642%3Fsecret_token%3Ds-qesPa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+				<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/128342976%3Fsecret_token%3Ds-qesPa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 			</div>
 		</div>
 		
@@ -336,24 +203,20 @@
 		<div id="contact" class="container">
 			<div class="box">
 				<h2> Contact </h2>
-				<p>You can send me jokes or love messages or a mail to say to go fuck myself <br/> As you wish bro !!! </p> 
-				<form action="contact.php" id="contactForm" method="post">
-					<span>Name</span>
-					<input type="text" name="name" class="name" placeholder="Enter your name" tabindex=1 /> <br/>
-					<span>Email</span>
-					<input type="text" name="email" class="email" placeholder="Enter your email" tabindex=2 /> <br/>
-					<span id="captcha"></span>
-					<input type="text" name="captcha" class="captcha" maxlength="4" size="4" placeholder="Enter captcha code" tabindex=3 /> <br/>
-					<span>Message</span>
-					<textarea name="message" class="message" placeholder="Enter your message" tabindex=4></textarea> <br/>
-					<input type="submit" name="submit" value="Send e-mail" class="submit" tabindex=5>
-				  </form>				
+				<p>I am always very happy to meet new people and to share a part of our lives. <br/> 
+					Sometimes I welcome strangers at home, and we share a meal, stories, a moment in our life. </br>
+					So feel free to write me about anything you have in mind and I will make sure to answer the soonest as I can.
+					</br> <p><b>faridbenmiles@gmail.com</p></b>
+					 
+					 <p>Make sure also to connect on my <a href="http://www.facebook.com/faridbenmiles">facebook page</a> to keep posted with latest news and to drop a message there too.</p>
+				</p> 
+								
 			</div>
 		</div>
 		
 		<!-- Footnote -->
 		<div id="footnote">
-		© Copyright 2015-2016 Farid Ben Miles | <a href="mentions.html" target="_blank">Mentions légales</a> 
+		© Copyright 2016 Farid Ben Miles | <a href="mentions.html" target="_blank">Mentions légales</a> 
 		</div>
 	
 	</body>	
