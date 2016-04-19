@@ -220,7 +220,7 @@
 					<ul>
 						<!--<li><a class="lien" href="#header">Top</a></li>-->
 						<li><a class="lien" href="#about-me-link">Who is Farid?</a></li>
-						<li><a class="lien" href="index.html#about-link">Back to my world</a></li>
+						<li><a class="lien" href="index.html">Back to my world</a></li>
 						<li><a class="lien" href="#contact-link">Contact</a></li>
 					</ul>
 					<select name="dropdpown" size="1" onchange="scrollTo(this.value)">
@@ -241,7 +241,7 @@
 				<h2>Who is Farid?</h2>
 				<img id="busking" src="img/Busking_in_Dresden.jpg" alt="Busking_in_Dresden"/>
 				<h3>"You don't know where you're going until you know where you have been" - <span>Unknown</span></h3>
-				<p>Traveling has been my life since forever, and even before myself. My parents were born in Algeria and are both from the Berber family. One of the most famous group of the Berbers is named the Tuareg who are known, among other things, for travelling and living in the desert of the Saharan. But they are just a small part of this big family... </p>
+				<p>Traveling has been my life since forever, and even before myself. My parents were born in Algeria and are both from the Berber family. One of the most famous group of the Berbers is named the Tuaregs who are known, among other things, for travelling and living in the desert of the Saharan. But they are just a small part of this big family... </p>
 				<p>Originally from the Maghreb (at least 10,000 BC), the Berbers expanded on the south to inhabit the whole Western North Africa and even more (Morocco, Algeria, Tunisia, Libya, Egypt, Mali, Niger, and Mauretania). Connections with the Scandinavians (Sami people) have even been found. The importance of the Berber culture in Arabic world is such that they are often miscalled Arabs. But beware if you do, they will have a pleasure reminding you the differences… =) </p>
 				<h3>"Youth smiles without any reason. It is one of its chiefest charms." - <span>Thomas Gray</span></h3>
 				<p>So this is almost unsurprisingly that my parents also moved from their birthplace: I was then born in the suburb of Paris. I grew up in a mixed environment between the French culture and the Arab-Berber culture: I was studying classical music in school and I was dancing on Oriental music at home (well, maybe not so much). </p>
@@ -267,19 +267,24 @@
 		<div id="contact" class="container">
 			<div class="box">
 				<h2> Contact </h2>
-				<p>I am always very happy to meet new people and to share a part of our lives. <br/> 
-					Sometimes I welcome strangers at home, and we share a meal, stories, a moment in our life. </br>
-					So feel free to write me about anything you have in mind and I will make sure to answer the soonest as I can.
-					</br> <p><b>faridbenmiles@gmail.com</p></b>
-					 
-					 <p>Make sure also to connect on my <a href="http://www.facebook.com/faridbenmiles">facebook page</a> to keep posted with latest news and to drop a message there too.</p>
-				</p> 				
+				<p>You can send me jokes or love messages or a mail to say to go fuck myself <br/> As you wish bro !!! </p> 
+				<form action="contact.php" id="contactForm" method="post">
+					<span>Name</span>
+					<input type="text" name="name" class="name" placeholder="Enter your name" tabindex=1 /> <br/>
+					<span>Email</span>
+					<input type="text" name="email" class="email" placeholder="Enter your email" tabindex=2 /> <br/>
+					<span id="captcha"></span>
+					<input type="text" name="captcha" class="captcha" maxlength="4" size="4" placeholder="Enter captcha code" tabindex=3 /> <br/>
+					<span>Message</span>
+					<textarea name="message" class="message" placeholder="Enter your message" tabindex=4></textarea> <br/>
+					<input type="submit" name="submit" value="Send e-mail" class="submit" tabindex=5>
+				  </form>				
 			</div>
 		</div>
 		
 		<!-- Footnote -->
 		<div id="footnote">
-		© Copyright 2016 Farid Ben Miles | <a href="mentions.html" target="_blank">Mentions légales</a> 
+		© Copyright 2015-2016 Farid Ben Miles | <a href="mentions.html" target="_blank">Mentions légales</a> 
 		</div>
 	
 	</body>	
