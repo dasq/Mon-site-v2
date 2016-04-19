@@ -35,10 +35,32 @@
 	================================================== -->
 		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 		
-		<!-- Sticky menu bar -->
+		<!-- Sticky menu bar  
 		<script src="js/jquery.sticky.js"></script>
 		<script src="js/sticky.menubar.js"></script>
-		<script src="js/parallax.js-master/parallax.min.js"></script>
+		<script>
+		  $(document).ready(function(){
+			$("#menu-container").sticky({topSpacing:0});
+		  });
+		</script>-->
+		
+		<script type="text/javascript">
+			var nav = $("#menu-container");
+			ms = "menu-scrolled"
+			hdr = $('body').padding-top();
+			
+			$(window).scroll(function() {
+				if($(this).scrollTop() > 830 {
+					nav.addClass(ms);
+				}
+				else {
+					nav.removeClass(ms);
+				}
+			});
+		
+		</script>
+
+		<script src="js/parallax.js-master/parallax.min.js"></script> 
 		
 		<!-- - - - JQUERY FOR SLIDING NAVIGATION - -->   
 		<script src="js/sliding.navigation.js">	</script>
@@ -55,14 +77,14 @@
 		<!-- Smooth scrolling in Chrome -->
 		<script src="js/smoothscroll.js"></script>
 		
-		<!-- Google Analytics -->
-		<script src="js/analytics.js"></script>
+		<!-- Google Analytics 
+		<script src="js/analytics.js"></script>-->
 		
     </head>
 	
 	<body>
 		<!-- header and social links -->
-		<div id="header" data-parallax="scroll" data-image-src="img/unnamed.jpg">
+		<div id="header" >
 			
 			<div id="social" >
 				<ul>
@@ -76,9 +98,9 @@
 		</div>
 		
 		<!-- menu -->
-		<div id="menu-container">
-			<div id="menu" class="fixed-nav-bar">
-				<div id="brand-link"><a href="#header"><img id="brand" alt="Farid-brand" src="img/logo/logo.png"/></a></div>
+		<div id="menu-container" >
+			<div id="menu" >
+				<div id="brand-link"><a href="#header"><img id="brand" alt="Farid-brand" src="img/logo/logo-white.png"/></a></div>
 					
 				<nav>
 					<ul>
@@ -122,21 +144,21 @@
 			</div>
 		</div>
 		
-		<!-- First photo -->
-		<section id="slide-1" data-parallax="scroll" data-image-src="img/slide/Wakatipu.jpg"></section>
+		<!-- First photo 
+		<section id="slide-1" data-parallax="scroll" data-image-src="img/slide/Wakatipu.jpg"></section>-->
 
 		<!-- Music player -->
 		<span class="anchor" id="music-link"></span>
 		<div id="music" class="container">
 			<div class="box">
 				<h2> Music </h2>
-				<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/128342976%3Fsecret_token%3Ds-qesPa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-			</div>
+				<!--<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/128342976%3Fsecret_token%3Ds-qesPa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+			 --></div>
 		</div>
 		
-		<!-- Second photo -->
+		<!-- Second photo 
 		<section id="slide-2" data-parallax="scroll" data-image-src="img/slide/Mosquee.jpg">	
-		</section>
+		</section>-->
 	
 		<!-- Pictures' content -->
 		<span class="anchor" id="pictures-link"></span>
@@ -166,9 +188,9 @@
 			</div>
 		</div>
 		
-		<!-- Third photo -->
+		<!-- Third photo 
 		<section id="slide-3" data-parallax="scroll" data-image-src="img/slide/Tongariro.jpg">		
-		</section>
+		</section>-->
 		
 		<!-- Tour information -->
 		<span class="anchor" id="tour-link"></span>
@@ -194,9 +216,9 @@
 			</div>
 		</div>
 		
-		<!-- Fourth photo -->
+		<!-- Fourth photo 
 		<section id="slide-4" data-parallax="scroll" data-image-src="img/slide/SandyBay.jpg">	
-		</section>
+		</section>-->
 		
 		<!-- Contact  form -->
 		<span class="anchor" id="contact-link"></span>

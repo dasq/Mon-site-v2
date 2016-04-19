@@ -9,10 +9,12 @@
 body {
 	margin: 0;
 	padding: 0;
+	padding-top: 830px;
 	font: 20px Roboto,'Source Sans Pro', Georgia, sans-serif;
 
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
+	
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!                ISOU <3 : Display of the titles of the content boxes                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -59,12 +61,8 @@ img {
 }
 
 /* Header parameter to fully display Parallax */
-#header { height:530px; }
+#header { background-image: url("img/unnamed.jpg"); background-size:cover; position: fixed; top: 0; width:100%; z-index:-150;}
 
-#menu #brand {float:left; height:150px; width:auto; margin-top:-510px; opacity:1; z-index:1;}
-
-#brand-sticky-wrapper {max-width:3000px;}
-#brand-link {max-width:30 00px;}
 
 /* Parameters of the social icons*/
 #social {
@@ -101,7 +99,9 @@ section {
 	height:60px;
 	width:100%;
 	position: relative;
-	z-index: 10;
+	z-index: 150;
+	margin-top: -150px;
+
 }
 
 #menu {
@@ -119,10 +119,15 @@ section {
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
 }
 
+#menu #brand {float:left; height:60px; width:auto; opacity:1; z-index:1;}
+
+#menu-scrolled { position: fixed; top: 0; width:100%; }
+
+
 nav { 
 	text-align:right; 
 	line-height:60px;	
-	margin-top: -150px;
+	
 	}
 	
 nav ul{
@@ -206,7 +211,7 @@ section {
 #tour td{padding: 4px 2px 4px 0px;}
 
 .box-about {
-	height:600px;
+	height:auto;
 	width:100%;
 	background-image: url("img/Western-Farid.png");
 	background-size: 600px;
@@ -261,70 +266,7 @@ font-size: 16px;
 
 }
 
-/* Contact form display */
-#contact {  overflow: auto;}
-#contact form {width:410px; float:left;}
-#contact form span {
-  display:block;
-  float:left;
-  width:100px;
-  padding-top:5px;
-  font: 16px Roboto,'Source Sans Pro', Georgia, serif;
-}
-#contact form input {
-  float:left;
-  width:255px;
-  border:0px;
-  color:#5C1416;
-  padding:10px 10px 10px 30px;
-  font: 14px Roboto,'Source Sans Pro', Verdana, Helvetica, sans-serif;
-  margin-bottom:10px;
-}
-#contact form textarea {
-  float:left;
-  border:0px;
-  width:255px;
-  height:140px;
-  padding:10px 10px 10px 30px;
-  font: 14px Roboto,'Source Sans Pro', Verdana, Helvetica, sans-serif;
-  color:#5C1416;
-  resize: none;
-}
-#contact form input.name {
-  background:#F0D4AE url("img/contact/name.png") no-repeat 10px 8px;
-}
-#contact form input.email {
-  background:#F0D4AE url("img/contact/mail.png") no-repeat 10px 9px;
-}
-#contact form input.captcha {
-  background:#F0D4AE url("img/contact/captcha.png") no-repeat 10px 9px;
-}
-#contact form textarea.message {
-  background:#F0D4AE url("img/contact/message.png") no-repeat 10px 8px;
-}
-#contact form input.submit {
-  cursor: pointer;
-  width:85px;
-  height:30px;
-  float:right;
-  padding:0px 0px 5px 0px;
-  margin:10px 16px 0px 0px;
-  background:#5C1416;
-  color:#F0D4AE;
-  font: 20px Amatic,'Source Sans Pro', Georgia, serif;
-}
-#contact form input.submit:hover{font-size:22px;}
-#contact #captcha span{
-  width: 44px;
-}
-#contact #captcha input{
-  background: url("img/contact/captcha.png") no-repeat scroll 0 0 transparent;
-  margin: 5px 0 0;
-  padding: 0;
-  border: medium none;
-  cursor: pointer;
-  width: 15px;
-}
+
 
 
 /* LAYOUT */
